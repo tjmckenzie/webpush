@@ -71,4 +71,12 @@ class MessageTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals(1, $this->message->toArray()['id']);
     }
+
+    /** @test */
+    public function it_can_set_the_data()
+    {
+        $this->message->data(['foo', 'bar']);
+
+        $this->assertEquals([['foo', 'bar']], $this->message->toArray()['data']);
+    }
 }
