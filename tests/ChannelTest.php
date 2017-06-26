@@ -81,6 +81,6 @@ class ChannelTest extends TestCase
      */
     protected function getPayload()
     {
-        return '{"id":1,"title":"Title","body":"Body","actions":[{"title":"Title","action":"Action"}],"icon":"Icon"}';
+        return '{"id":1,"title":"Title","body":"Body","data":{"foo":"bar"},"actions":[{"title":"Title","action":"Action"}],"icon":"Icon"}';
     }
 }

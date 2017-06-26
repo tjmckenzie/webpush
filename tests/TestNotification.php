@@ -21,6 +21,7 @@ class TestNotification extends Notification
             ->title('Title')
             ->icon('Icon')
             ->body('Body')
+            ->data(['foo' => 'bar'])
             ->action('Title', 'Action');
     }
 }

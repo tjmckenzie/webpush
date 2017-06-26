@@ -37,6 +37,13 @@ class WebPushMessage
      *
      * @var array
      */
+    protected $data = [];
+
+    /**
+     * The notification actions.
+     *
+     * @var array
+     */
     protected $actions = [];
 
     /**
@@ -112,6 +119,19 @@ class WebPushMessage
     }
 
     /**
+     * Set the data.
+     *
+     * @param  arr $data
+     * @return $this
+     */
+    public function data($data)
+    {
+        $this->data = $data;
+
+        return $this;
+    }
+
+    /**
      * Set an action.
      *
      * @param  string $title
@@ -136,6 +156,7 @@ class WebPushMessage
             'id' => $this->id,
             'title' => $this->title,
             'body' => $this->body,
+            'data' => $this->data,
             'actions' => $this->actions,
             'icon' => $this->icon,
         ];
